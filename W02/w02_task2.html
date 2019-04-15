@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W02: Task 02</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script src="vec3.js"></script>
+    <p>
+      三点の座標を入力してください.
+    </p>
+    <form>
+      点A:
+      <input type="text" id="x0" placeholder="x" size="4">
+      <input type="text" id="y0" placeholder="y" size="4">
+      <input type="text" id="z0" placeholder="z" size="4">
+      <br>
+      点B:
+      <input type="text" id="x1" placeholder="x" size="4">
+      <input type="text" id="y1" placeholder="y" size="4">
+      <input type="text" id="z1" placeholder="z" size="4">
+      <br>
+      点C:
+      <input type="text" id="x2" placeholder="x" size="4">
+      <input type="text" id="y2" placeholder="y" size="4">
+      <input type="text" id="z2" placeholder="z" size="4">
+      <br><br>
+      <input type="button" onclick="S.value=getS(x0.value,y0.value,z0.value,x1.value,y1.value,z1.value,x2.value,y2.value,z2.value)" value="面積を計算する" id="button">
+      <br><br>
+      △ABCの面積：<output id="S"></output>
+    </form>
+    <script>
+      function getS(x0,y0,z0,x1,y1,z1,x2,y2,z2){
+        var v0 = new Vec3(x0, y0, z0);
+        var v1 = new Vec3(x1, y1, z1);
+        var v2 = new Vec3(x2, y2, z2);
+        return v0.AreaOfTriangle(v1, v2);
+      }
+      function event() {
+        var x0 = document.getElementById("x0").value;
+        var y0 = document.getElementById("y0").value;
+        var z0 = document.getElementById("z0").value;
+
+        var x1 = document.getElementById("x1").value;
+        var y1 = document.getElementById("y1").value;
+        var z1 = document.getElementById("z1").value;
+
+        var x2 = document.getElementById("x2").value;
+        var y2 = document.getElementById("y2").value;
+        var z2 = document.getElementById("z2").value;
+
+        var s = getS(x0,y0,z0,x1,y1,z1,x2,y2,z2)
+
+        // 取得した値を別の入力フォームに表示
+        var result = document.getElementById("S");
+        result.value = s;
+      }
+    </script>
+</html>
