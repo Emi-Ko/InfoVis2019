@@ -21,9 +21,11 @@ function main()
     var light = new THREE.PointLight( 0xffffff );
     light.position.set( 1, 1, 1 );
     scene.add( light );
-    var light2 = new THREE.AmbientLight( 0x383c3c );
-    light2.position.set( 1, 1, 1 );
-    scene.add(light2)
+
+    // if you use MeshLambertMaterial, use those code
+    //var light2 = new THREE.AmbientLight( 0x383c3c );
+    //light2.position.set( 1, 1, 1 );
+    //scene.add(light2)
 
     var vertices = [
       [-1, 1, -1],  // v0
@@ -65,7 +67,7 @@ function main()
     //material.side = THREE.DoubleSide;
 
     //var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    var material = new THREE.MeshLambertMaterial();
+    var material = new THREE.MeshBasicMaterial();
     material.vertexColors = THREE.FaceColors;
 
     var cube = new THREE.Mesh( geometry, material );
