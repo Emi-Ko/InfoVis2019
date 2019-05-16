@@ -1,0 +1,19 @@
+task01:
+  w08_main_task01.js
+  w08_index_task01.html
+
+task02:
+  試行錯誤こっち方面でやらないといけないような気もするけど微妙（未完成）
+    w08_main_task02.js
+    w08_index_task02.html
+  あってるかわからないけど、タスクの指定通りの表示は得られている。完成版。
+  多分これを提出する。
+    w08_main_task02_2.js
+    w08_index_task02_2.html
+
+task03:
+  w08_main_task03.js
+  w08_index_task03.html
+    ※ w08_main_task02_2.js
+      w08_index_task02_2.html
+      がベース。これらを元につくった。
